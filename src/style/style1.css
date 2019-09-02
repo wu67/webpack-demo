@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+}
+
+#app {
+  color: purple;
+}
+
+.btn-return {
+  width: 171px;
+  height: 76px;
+  /*background-image: url('../../static/btn_return.png');*/
+}

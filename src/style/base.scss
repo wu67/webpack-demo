@@ -1,0 +1,44 @@
+html { overflow: auto; }
+body {
+  margin: 0;
+  text-align: justify;
+  -webkit-overflow-scrolling: touch;
+}
+* {
+  flex: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  &.cover {
+    background-size: cover;
+  }
+  &.top {
+    background-position-y: top;
+  }
+}
+.overflow {
+  overflow: auto;
+}
+.hidden {
+  overflow: hidden;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.absolute, .fixed {
+  z-index: 0;
+}
