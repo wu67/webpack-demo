@@ -2,11 +2,12 @@ const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.js')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
-const TerserJSPlugin = require("terser-webpack-plugin")
+// 该插件会把source-map一起混淆
+const TerserJSPlugin = require('terser-webpack-plugin')
 
 const prodConfig = {
   mode: 'production',
-  devtool: process.env.devtool ? process.env.devtool : 'none',
+  devtool: 'none',
   optimization: {
     minimizer: [
       new TerserJSPlugin({}),
@@ -32,7 +33,7 @@ const prodConfig = {
     // }),
   ],
 }
-console.log(prodConfig.devtool)
+
 module.exports = () => {
   return merge(baseConfig, prodConfig)
 }

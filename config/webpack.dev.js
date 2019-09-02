@@ -5,7 +5,7 @@ let hmrPlugin = new webpack.HotModuleReplacementPlugin()
 
 let devConfig = {
   mode: 'development',
-  devtool: 'cheap-eval-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     hot: true,
     contentBase: './dist',

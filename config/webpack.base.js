@@ -24,6 +24,12 @@ module.exports = {
         loader: 'vue-loader',
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, '../src'),
+        loader: 'babel-loader',
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         // 不用vue的话，可以把vue-style-loader 替换成style-loader
         use: [
